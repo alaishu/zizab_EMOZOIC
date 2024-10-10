@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Emozoic - Learn Emotions Through Fun</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar section-content">
+        <div class="nav-logo">EMOZOIC</div>
+        <ul class="nav-menu">
+          <li class="nav-item">
+            <a href="#home" class="nav-link">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="#about" class="nav-link">About</a>
+          </li>
+          <li class="nav-item">
+            <a href="#emotions" class="nav-link">Emotions</a>
+          </li>
+          <li class="nav-item">
+            <a href="#mini-games" class="nav-link">Mini Games</a>
+          </li>
+        </ul>
+        <button id="menu-toggle" class="menu-toggle">
+          <i class="fas fa-bars"></i>
+        </button>
+      </nav>
+    </header>
+
+    <main>
+      <section id="home" class="hero-section">
+        <div class="section-content">
+          <div class="hero-details">
+            <h1 class="title">EMOZOIC</h1>
+            <h2 class="subtitle">We learn, We know, WEmozoic!</h2>
+            <p class="description">
+              Welcome to the playground where we learn emotions and have fun
+              with Emozoic.
+            </p>
+            <div class="button-container">
+              <a href="#emotions" class="button lets-learn">Let's Learn</a>
+            </div>
+          </div>
+          <div class="hero-image-wrapper">
+            <img
+              src="Untitled (3).png"
+              alt="Emozoic mascot"
+              class="hero-image"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="about-section">
+        <div class="section-content">
+          <div class="about-image-wrapper">
+            <img
+              src="WhatsApp_Image_2024-10-02_at_12.51.20-removebg-preview.png"
+              alt="Children learning emotions"
+              class="about-image"
+            />
+          </div>
+          <div class="about-details">
+            <h2 class="section-title">About Us</h2>
+            <p class="text">
+              At Emozoic, we are dedicated to helping children explore and
+              understand their emotions through an interactive and fun learning
+              experience. Our platform introduces children to the basic
+              emotions—happiness, sadness, anger, and fear—through engaging
+              activities and colorful characters. We believe that emotional
+              awareness is key to a child's personal growth, and our mission is
+              to make this learning journey both easy and enjoyable.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="emotions" class="emotions-section">
+        <div class="section-content">
+          <h2 class="emotion-title">Explore Your Emotions</h2>
+          <div class="emotions-grid">
+            <div class="emotion-card" data-emotion="happy">
+              <img
+                src="Screenshot 2024-10-06 172340.png"
+                alt="Happy"
+                class="emotion-image"
+              />
+              <h3 class="emotion-name">Happy</h3>
+            </div>
+            <div class="emotion-card" data-emotion="sad">
+              <img
+                src="Screenshot 2024-10-06 175123.png"
+                alt="Sad"
+                class="emotion-image"
+              />
+              <h3 class="emotion-name">Sad</h3>
+            </div>
+            <div class="emotion-card" data-emotion="angry">
+              <img
+                src="Screenshot 2024-10-06 175445.png"
+                alt="Angry"
+                class="emotion-image"
+              />
+              <h3 class="emotion-name">Angry</h3>
+            </div>
+            <div class="emotion-card" data-emotion="fear">
+              <img
+                src="Screenshot 2024-10-06 174958.png"
+                alt="Fear"
+                class="emotion-image"
+              />
+              <h3 class="emotion-name">Fear</h3>
+            </div>
+          </div>
+        </div>
+        <!-- Popup Modal for Emotion Details -->
+        <div id="emotion-popup" class="popup">
+          <div class="popup-content">
+            <span class="close-popup">&times;</span>
+            <h3 id="emotion-title"></h3>
+            <p id="emotion-description"></p>
+          </div>
+        </div>
+      </section>
+
+      <section id="mini-games" class="mini-games-section">
+        <div class="section-content">
+          <h2 class="section-title">Emotion Matching Game</h2>
+          <div id="timer" class="timer-display">Time Left: 60s</div>
+          <div class="game-container">
+            <div class="game-grid">
+              <!-- Game cards will be dynamically inserted here -->
+            </div>
+          </div>
+          <p id="game-result"></p>
+          <button id="start-game" class="game-button">Start Game</button>
+          <button id="reset-game" class="game-button">Reset Game</button>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="section-content">
+        <p>&copy; 2024 Emozoic. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <canvas id="confetti-canvas"></canvas>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

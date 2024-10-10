@@ -1,0 +1,419 @@
+/* importing google fonts */
+@import url("https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&family=Unbounded:wght@200..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Afacad Flux", sans-serif;
+}
+
+:root {
+  /* colors */
+  --gradient-purple: linear-gradient(135deg, #de857b, #dbdb70);
+  --gradient-ocean: linear-gradient(135deg, #00ffff, #1e90ff);
+  --gradient-sunset: linear-gradient(
+    120deg,
+    #e4e084,
+    #4520db,
+    #9ee191,
+    #39a9da
+  );
+  --pink-color: #f8a7d6;
+  --blue-color: #4b0ae3;
+  --happi-color: #fc5e3b;
+  --happy-color: #effe99;
+  --gradient-cloud: linear-gradient(135deg, #ffffff, #f0f8ff);
+  --white-color: #ffffff;
+  --neon-color: #9ee191;
+
+  /* font size */
+  --font-size-s: 0.9rem;
+  --font-size-n: 1rem;
+  --font-size-m: 1.12rem;
+  --font-size-l: 1.5rem;
+  --font-size-xl: 2rem;
+  --font-size-xxl: 2.3rem;
+
+  /* font weight */
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  /* border radius */
+  --border-radius-s: 8px;
+  --border-radius-m: 30px;
+  --border-radius-circle: 50%;
+
+  /* site max width */
+  --site-max-width: 1300px;
+}
+
+/* Styling for whole site */
+body {
+  line-height: 1.6;
+  color: var(--blue-color);
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.section-content {
+  margin: 0 auto;
+  padding: 0 20px;
+  max-width: var(--site-max-width);
+}
+
+/* Navbar styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: var(--neon-color);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar .nav-menu .nav-link {
+  padding: 10px 18px;
+  color: var(--blue-color);
+  border-radius: var(--border-radius-m);
+  transition: 0.3s ease;
+}
+
+.navbar .nav-menu .nav-link:hover {
+  background-color: var(--happi-color);
+  color: var(--white-color);
+}
+
+.nav-logo {
+  font-family: "Unbounded", sans-serif;
+  font-size: var(--font-size-s);
+  font-weight: var(--font-weight-bold);
+  color: var(--blue-color);
+}
+
+.nav-menu {
+  display: flex;
+  gap: 2rem;
+  font-family: "Unbounded", sans-serif;
+  font-weight: var(--font-weight-bold);
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: var(--font-size-l);
+  color: var(--blue-color);
+  cursor: pointer;
+}
+
+/* hero section styling */
+.hero-section {
+  min-height: 100vh;
+  background: var(--gradient-sunset);
+  padding-top: 80px; /* Adjust based on navbar height */
+  display: flex;
+  align-items: center;
+}
+
+.hero-section .section-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--white-color);
+}
+
+.hero-section .hero-details {
+  flex: 1;
+}
+
+.hero-section .hero-details .title {
+  font-size: var(--font-size-xxl);
+  font-family: "Unbounded", sans-serif;
+  font-weight: var(--font-weight-bold);
+  color: var(--white-color);
+}
+
+.hero-section .hero-details .subtitle {
+  margin-top: 20px;
+  font-size: var(--font-size-l);
+  font-weight: var(--font-weight-bold);
+}
+
+.hero-section .hero-details .description {
+  margin: 24px 0 30px;
+  font-size: var(--font-size-m);
+  font-weight: var(--font-weight-medium);
+}
+
+.hero-section .hero-details .button {
+  padding: 10px 26px;
+  border: 2px solid transparent;
+  color: var(--white-color);
+  background: var(--happi-color);
+  border-radius: var(--border-radius-m);
+  transition: 0.3s ease;
+  font-weight: var(--font-weight-bold);
+  display: inline-block;
+}
+
+.hero-section .hero-details .button:hover {
+  color: var(--white-color);
+  border-color: var(--happi-color);
+  background: transparent;
+}
+
+.hero-section .hero-image-wrapper {
+  flex: 1;
+  max-width: 500px;
+  margin-left: 30px;
+}
+
+/* about section styling */
+.about-section {
+  padding: 80px 0;
+  background: var(--white-color);
+}
+
+.about-section .section-content {
+  display: flex;
+  gap: 50px;
+  align-items: center;
+}
+
+.about-section .about-details {
+  flex: 1;
+}
+
+.about-section .about-details .section-title {
+  font-size: var(--font-size-xl);
+  font-family: "Unbounded", sans-serif;
+  font-weight: var(--font-weight-bold);
+  color: var(--blue-color);
+  margin-bottom: 20px;
+}
+
+.about-section .about-details .text {
+  font-size: var(--font-size-m);
+  font-weight: var(--font-weight-medium);
+}
+
+.about-section .about-image-wrapper {
+  flex: 1;
+  max-width: 400px;
+}
+
+/* Emotions Section */
+.emotions-section {
+  padding: 180px 0;
+  background-color: var(--neon-color);
+}
+
+.emotions-section .emotion-title {
+  text-align: center;
+  font-size: var(--font-size-xl);
+  color: var(--blue-color);
+  margin-bottom: 40px;
+  font-family: "Unbounded", sans-serif;
+}
+
+.emotions-grid {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.emotion-card {
+  background-color: var(--white-color);
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  padding: 20px;
+  width: 200px;
+}
+
+.emotion-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.emotion-image {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.emotion-name {
+  font-family: "Unbounded", sans-serif;
+  font-size: var(--font-size-m);
+  font-weight: var(--font-weight-semibold);
+  margin-top: 10px;
+}
+
+/* Emotion Popup Styles */
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.popup-content {
+  background-color: var(--white-color);
+  padding: 30px;
+  border-radius: 10px;
+  width: 80%;
+  max-width: 400px;
+  text-align: center;
+  position: relative;
+}
+
+.close-popup {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  background: none;
+  border: none;
+  color: var(--blue-color);
+}
+
+.close-popup:hover {
+  color: var(--happi-color);
+}
+
+.mini-games-section {
+  padding: 120px 0;
+  background: var(--white-color);
+}
+
+.game-container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.game-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.game-card {
+  aspect-ratio: 1;
+  background-color: var(--blue-color);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.game-card:hover {
+  transform: scale(1.05);
+}
+
+.game-card.flipped {
+  background-color: var(--white-color);
+}
+
+.game-button {
+  display: inline-block;
+  margin: 10px;
+  padding: 10px 20px;
+  background-color: var(--happi-color);
+  color: var(--white-color);
+  border: none;
+  border-radius: var(--border-radius-m);
+  font-size: var(--font-size-m);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.game-button:hover {
+  background-color: var(--blue-color);
+}
+
+#confetti-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-menu {
+    position: fixed;
+    top: 60px;
+    right: -100%;
+    flex-direction: column;
+    background-color: var(--neon-color);
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
+    box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+  }
+
+  .nav-menu.active {
+    right: 0;
+  }
+
+  .nav-item {
+    margin: 2.5rem 0;
+  }
+
+  .game-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .game-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
